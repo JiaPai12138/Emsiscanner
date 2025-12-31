@@ -56,15 +56,22 @@ Windows Registry Editor Version 5.00
 @="powershell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/c, \"D:\\EEK\\bin64\\a2cmd.exe\" /u' -Verb RunAs\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Emsisoft_CMD\shell\002flyout]
-"MUIVerb"="Malware Scan with Emsisoft"
+"MUIVerb"="Quick Scan with Emsisoft"
 "Icon"="D:\\EEK\\bin64\\a2cmd.exe"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Emsisoft_CMD\shell\002flyout\command]
-@="powershell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, \"D:\\EEK\\bin64\\a2cmd.exe\" /a /am /n /ac /q=D:\\EEK\\Quarantine\\ /malware & pause & exit' -Verb RunAs\""
+@="powershell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, \"D:\\EEK\\bin64\\a2cmd.exe\" /a /am /n /ac /q=D:\\EEK\\Quarantine\\ /quick & pause & exit' -Verb RunAs\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Emsisoft_CMD\shell\003flyout]
-"MUIVerb"="Update + Scan with Emsisoft"
+"MUIVerb"="Malware Scan with Emsisoft"
 "Icon"="D:\\EEK\\bin64\\a2cmd.exe"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Emsisoft_CMD\shell\003flyout\command]
+@="powershell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, \"D:\\EEK\\bin64\\a2cmd.exe\" /a /am /n /ac /q=D:\\EEK\\Quarantine\\ /malware & pause & exit' -Verb RunAs\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Emsisoft_CMD\shell\004flyout]
+"MUIVerb"="Update + Scan with Emsisoft"
+"Icon"="D:\\EEK\\bin64\\a2cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Emsisoft_CMD\shell\004flyout\command]
 @="powershell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, \"D:\\EEK\\bin64\\a2cmd.exe\" /u & D:\\EEK\\bin64\\a2cmd.exe\" /a /am /n /ac /q=D:\\EEK\\Quarantine\\ /malware & pause & exit' -Verb RunAs\""
